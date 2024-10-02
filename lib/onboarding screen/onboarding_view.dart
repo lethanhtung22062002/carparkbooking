@@ -2,7 +2,6 @@ import 'package:carparkbooking/Components/color.dart';
 import 'package:carparkbooking/login%20/login.dart';
 import 'package:carparkbooking/onboarding%20screen/onboarding_items.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingView extends StatefulWidget {
@@ -23,7 +22,7 @@ class _OnboardingViewState extends State<OnboardingView> {
     return Scaffold(
       bottomSheet: Container(
         color: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 32),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 40),
         child: isLastPage
             ? getStarted(context)
             : Row(
