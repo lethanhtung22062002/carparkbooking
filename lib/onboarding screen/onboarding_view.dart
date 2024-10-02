@@ -1,5 +1,5 @@
 import 'package:carparkbooking/Components/color.dart';
-import 'package:carparkbooking/home.dart';
+import 'package:carparkbooking/login%20/login.dart';
 import 'package:carparkbooking/onboarding%20screen/onboarding_items.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -35,7 +35,11 @@ class _OnboardingViewState extends State<OnboardingView> {
                         pageController.jumpToPage(controller.items.length - 1),
                     child: const Text(
                       "SKIP",
-                      style: TextStyle(color: primaryColor, fontSize: 17),
+                      style: TextStyle(
+                        color: primaryColor,
+                        fontSize: 17,
+                        fontFamily: 'OpenSans-LightItalic',
+                      ),
                     ),
                   ),
 
@@ -60,7 +64,11 @@ class _OnboardingViewState extends State<OnboardingView> {
                         curve: Curves.easeIn),
                     child: const Text(
                       "NEXT",
-                      style: TextStyle(color: primaryColor, fontSize: 17),
+                      style: TextStyle(
+                        color: primaryColor,
+                        fontSize: 17,
+                        fontFamily: 'OpenSans-LightItalic',
+                      ),
                     ),
                   ),
                 ],
@@ -84,14 +92,18 @@ class _OnboardingViewState extends State<OnboardingView> {
                 Text(
                   controller.items[index].title,
                   style: const TextStyle(
-                    fontSize: 30,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
+                    fontFamily: 'OpenSans-BoldItalic',
                   ),
                 ),
                 const SizedBox(height: 15),
                 Text(
                   controller.items[index].description,
-                  style: const TextStyle(color: Colors.grey, fontSize: 18),
+                  style: const TextStyle(
+                    color: Colors.grey,
+                    fontSize: 18,
+                  ),
                   textAlign: TextAlign.center,
                 ),
               ],
@@ -113,21 +125,19 @@ class _OnboardingViewState extends State<OnboardingView> {
       height: 56,
       child: TextButton(
         onPressed: () async {
-          // final pres = await SharedPreferences.getInstance();
-          // pres.setBool("onboarding", true);
-
-          // // Check if the widget is still mounted
-          // if (!mounted) return;
-
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => const Home()),
+            MaterialPageRoute(builder: (context) => const LoginScreen()),
           );
         },
         child: const Text(
           "Get Started",
           style: TextStyle(
-              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'OpenSans-BoldItalic',
+          ),
         ),
       ),
     );
