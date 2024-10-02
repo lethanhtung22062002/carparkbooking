@@ -1,5 +1,6 @@
 import 'package:carparkbooking/home.dart';
 import 'package:carparkbooking/onboarding%20screen/onboarding_view.dart';
+import 'package:carparkbooking/splash/splash_screen.dart';
 // import 'package:carparkbooking/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -24,21 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: const OnboardingView(),
+      home: const SplashScreen(),
     );
   }
 }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: 'Flutter Demo',
-//       theme: ThemeData(
-//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-//         useMaterial3: true,
-//       ),
-//       home: const SplashScreen(),
-//     );
-//   }
-// }
